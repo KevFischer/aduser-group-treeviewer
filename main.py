@@ -1,5 +1,4 @@
 import plotly.graph_objects as go
-import igraph
 from igraph import Graph, EdgeSeq
 from src.ad import get_aduser, get_groups, get_groups_recursive
 
@@ -59,7 +58,7 @@ fig.add_trace(go.Scatter(x=Xe,
 fig.add_trace(go.Scatter(x=Xn,
                   y=Yn,
                   mode='markers',
-                  name='bla',
+                  name='Group',
                   marker=dict(symbol='square',
                                 size=12,
                                 color='#6175c1',    #'#DB4551',
@@ -79,7 +78,7 @@ axis = dict(showline=False, # hide axis line, grid, ticklabels and  title
 fig.update_layout(title= f'Group memberships of {"".join(user.get_attribute("name"))}',
               annotations=make_annotations(position, v_label),
               font_size=12,
-              showlegend=False,
+              showlegend=True,
               xaxis=axis,
               yaxis=axis,
               margin=dict(l=40, r=40, b=85, t=100),
