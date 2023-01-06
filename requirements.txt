@@ -1,0 +1,14 @@
+future==0.18.2
+igraph==0.10.3
+numpy==1.24.1
+pandas==1.5.2
+plotly==5.11.0
+pyad==0.6.0
+pyparsing==3.0.9
+python-dateutil==2.8.2
+python-igraph==0.10.3
+pytz==2022.7
+pywin32==305
+six==1.16.0
+tenacity==8.1.0
+texttable==1.6.7
