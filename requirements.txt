@@ -12,3 +12,4 @@ pywin32==305
 six==1.16.0
 tenacity==8.1.0
 texttable==1.6.7
+treelib==1.6.1
