@@ -105,18 +105,19 @@ Note: You need to be in the same directory where requirements.txt is located.
 
 ## Run the program
 
-### Using the source code
-
-If you match all prerequisites from above, you should be able to run the program with the following command:
-
-In project directory:
-
-    python main.py
-
-### Using the released executable
-
-TBA
+There are some start arguments which are necessary to run the program:
     
+|Short Option|Long Option|Parameters|Description|Required|
+|---|---|---|---|---|
+|-h|--help|None|List all options with it's description|No|
+|-ng|--nogui|-|Decide wether the tree should be displayed in a GUI or not|No|
+|-o|--outfile|String|File where results should be safed in|No|
+|-u|--user|String|SamAccountName of ADUser|Yes|
+
+So running the program can look the following:
+
+    .\aduser-group-treeviewer.exe --nogui --user "abc123" --outfile "test.txt"
+
 ## Troubleshooting
 
 Feel free to create [issues](https://github.com/KevFischer/aduser-group-treeviewer/issues) if you have troubles starting the app or setting up one of the prerequisites.
