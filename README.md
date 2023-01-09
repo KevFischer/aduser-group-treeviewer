@@ -112,7 +112,7 @@ There are some start arguments which are necessary to run the program:
 |-h|--help|None|List all options with it's description|No|
 |-ng|--nogui|-|Decide wether the tree should be displayed in a GUI or not|No|
 |-o|--outfile|String|File where results should be safed in|No|
-|-u|--user|String|SamAccountName of ADUser|Yes|
+|-u|--user|String|SamAccountName of ADUser|No|
 
 So running the program can look the following:
 

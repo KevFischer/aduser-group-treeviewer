@@ -30,19 +30,6 @@ attributes: list = [
             ]
 
 
-app = Tk()
-treeview = ttk.Treeview(app)
-info = Text(app, state=DISABLED)
-infos = {}
-
-
-def onClick(event):
-    info.configure(state="normal")
-    info.delete('1.0', END)
-    info.insert(END, chars=infos[treeview.selection()[0]])
-    info.configure(state=DISABLED)
-
-
 def show_tree(tree: Tree=None) -> None:
     """
     Generate a tkinter view of the tree.
@@ -51,6 +38,18 @@ def show_tree(tree: Tree=None) -> None:
         tree (Tree, optional): Tree to build the tree. Defaults to None.
     """
 
+    app = Tk()
+    treeview = ttk.Treeview(app)
+    info = Text(app, state=DISABLED)
+    infos = {}
+
+
+    def onClick(event):
+        info.configure(state="normal")
+        info.delete('1.0', END)
+        info.insert(END, chars=infos[treeview.selection()[0]])
+        info.configure(state=DISABLED)
+        
     # Init tkinter
     app.title(f"Groups of {tree.root}")
     app.geometry(f"{app.winfo_screenwidth() - 10}x{app.winfo_screenheight() - 10}+0+0")
