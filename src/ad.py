@@ -16,6 +16,12 @@ def get_aduser(name: str=None) -> pyad.aduser.ADUser:
     Returns:
         pyad.ADUser: ADUser Object matching to given string.
     """
+    query: pyad.adquery.ADQuery= pyad.adquery.ADQuery()
+    query.execute_query(
+        attributes=["name"],
+        where_clause=f"SamAccountName = '{name}'"
+    )
+    name = query.get_single_result()["name"]
     try:
         user = pyad.aduser.ADUser.from_cn(name)
     except:
