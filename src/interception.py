@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from src.ad import get_aduser, create_tree
 from src.tree import show_tree
+import pyad.adquery, pyad.adsearch, pyad.adcomputer, pyad.adbase, pyad.adcontainer, pyad.addomain, pyad.adgroup, pyad.aduser, pyad.pyad
 
 
 def show_input():

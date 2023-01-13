@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import ttk
 from treelib import Tree
 import pyad.adquery
+import win32timezone
 
 attributes: list = [
                 "canonicalName",
