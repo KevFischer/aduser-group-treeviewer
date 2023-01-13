@@ -1,1 +1,0 @@
-pyinstaller --clean --onefile --icon C:\Users\wm01114\Downloads\download.ico --name aduser-group-treeviewer.exe --path src --path venv/Lib/site-packages main.py
